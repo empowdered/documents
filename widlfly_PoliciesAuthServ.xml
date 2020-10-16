@@ -1,0 +1,9 @@
+                <security-domain name="authenticationPolicyAuthBeta">
+                    <authentication>
+                        <login-module code="com.esign.backend.security.LoginModule" flag="sufficient">
+                            <module-option name="dsJndiName" value="java:jboss/datasources/authbeta"/>
+                            <module-option name="propiedadLogin" value="SELECT value FROM PROPIEDAD WHERE key = 'MS_ESIGN_AUTH_SERVICE_LOGIN_BY_DOC'"/>
+                            <module-option name="propiedadToken" value="SELECT value FROM PROPIEDAD WHERE key = 'MS_ESIGN_AUTH_SERVICE_GET_TOKEN'"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
